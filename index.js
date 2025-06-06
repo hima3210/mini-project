@@ -41,7 +41,7 @@ const markCommit = (date) => {
 const makeCommits = () => {
   const totalWeeks = 52; // Number of weeks in a year
   const contributionsPerMonth = 10; // Number of contributions per month
-  const darkGreenDaysPerMonth = 5; // Increased number of days with higher activity per month
+  const darkGreenDaysPerMonth = 2; // Number of days with higher activity per month
 
   for (let month = 0; month < 12; month++) {
     const darkGreenDays = [];
@@ -72,7 +72,7 @@ const makeCommits = () => {
 
       // If it's a dark green day, make additional commits
       if (isDarkGreenDay) {
-        const extraCommits = random.int(5, 10); // Increased number of extra commits
+        const extraCommits = random.int(3, 5); // Random number of extra commits
         for (let j = 0; j < extraCommits; j++) {
           markCommit(date); // Additional commits on the same day
         }
